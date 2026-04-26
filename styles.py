@@ -4,6 +4,16 @@ Pure data: design-system CSS and all HTML template strings.
 Nothing here imports streamlit or does any logic.
 """
 
+import base64 as _b64
+import pathlib as _pl
+
+def _logo_b64() -> str:
+    p = _pl.Path(__file__).parent / 'pictures' / 'logo' / 'logo.png'
+    return _b64.b64encode(p.read_bytes()).decode()
+
+_LOGO_B64 = _logo_b64()
+LOGO_IMG_TAG = f'<img src="data:image/png;base64,{_LOGO_B64}" style="width:38px;height:38px;object-fit:contain;" />'
+
 # ── Philippine Grading Scale ───────────────────────────────────
 PH_GRADE_OPTIONS = [None, 1.0, 1.25, 1.5, 1.75, 2.0, 2.5, 2.75, 3.0, 5.0]
 PH_GRADE_LABELS = {
@@ -129,14 +139,13 @@ section.main .block-container {
 .ce-nav-logo-mark {
   width: 38px;
   height: 38px;
-  background: linear-gradient(135deg, var(--maroon) 0%, var(--maroon-dk) 100%);
+  background: none;
   border-radius: var(--r-sm);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.15rem;
-  box-shadow: 0 2px 10px var(--maroon-glow);
   flex-shrink: 0;
+  overflow: hidden;
 }
 
 .ce-nav-logo-text {
@@ -660,9 +669,49 @@ div[data-testid="stButton"] > button:active {
 [data-testid="stSidebar"] h2,
 [data-testid="stSidebar"] h3 { color: var(--gold) !important; }
 
+/* Selectbox container — white bg so selected text is readable */
+[data-testid="stSidebar"] [data-baseweb="select"] > div:first-child {
+  background:var(--maroon)!important;
+  border-color: var(--maroon) !important;
+}
+
 [data-testid="stSidebar"] [data-baseweb="select"] [data-baseweb="input-container"],
 [data-testid="stSidebar"] [data-baseweb="select"] span,
-[data-testid="stSidebar"] [data-baseweb="select"] div[class*="valueContainer"] {
+[data-testid="stSidebar"] [data-baseweb="select"] div[class*="valueContainer"],
+[data-testid="stSidebar"] [data-baseweb="select"] [data-baseweb="single-value"],
+[data-testid="stSidebar"] [data-baseweb="select"] input {
+  color: #1c0e0f !important;
+  background: transparent !important;
+}
+
+/* Dropdown arrow icon */
+[data-testid="stSidebar"] [data-baseweb="select"] svg {
+  fill: #1c0e0f !important;
+}
+
+/* Dropdown open — list container */
+[data-baseweb="popover"] [data-baseweb="menu"],
+[data-baseweb="popover"] ul {
+  background: #ffffff !important;
+}
+
+/* Each option item */
+[data-baseweb="popover"] [role="option"],
+[data-baseweb="popover"] li {
+  color: #1c0e0f !important;
+  background: #ffffff !important;
+}
+
+/* Hovered option */
+[data-baseweb="popover"] [role="option"]:hover,
+[data-baseweb="popover"] li:hover {
+  background: #f0e8e8 !important;
+  color: #1c0e0f !important;
+}
+
+/* Selected/highlighted option */
+[data-baseweb="popover"] [aria-selected="true"] {
+  background: #e8d5d5 !important;
   color: #1c0e0f !important;
 }
 
@@ -1134,10 +1183,10 @@ function ceSwitchTab(idx) {
 
 # ── HTML Templates ─────────────────────────────────────────────
 
-NAVBAR_HTML = """
+NAVBAR_HTML = f"""
 <div class="ce-navbar">
   <div class="ce-nav-logo">
-    <div class="ce-nav-logo-mark">⚙️</div>
+    <div class="ce-nav-logo-mark">{LOGO_IMG_TAG}</div>
     <div class="ce-nav-logo-text">
       <span class="ce-nav-logo-main">CE <em>Predictor</em></span>
       <span class="ce-nav-logo-sub">MSU–Marawi · Civil Engineering</span>

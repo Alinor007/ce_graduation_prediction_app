@@ -5,6 +5,7 @@ Run with:  streamlit run app.py
 """
 
 import streamlit as st
+from PIL import Image
 
 import ui_components as ui
 from config import ALGORITHMS, EXPORT_SNIPPET
@@ -13,9 +14,10 @@ from tabs import render_model1_tab, render_model2_tab, render_model3_tab
 
 
 def _configure_page() -> None:
+    logo = Image.open("pictures/logo/logo.png")
     st.set_page_config(
         page_title="CE Graduation Predictor — MSU Marawi",
-        page_icon="🎓",
+        page_icon=logo,
         layout="wide",
         initial_sidebar_state="expanded",
     )
