@@ -21,8 +21,7 @@ def _strand_to_onehot(strand: str) -> dict[str, int]:
 
 def render_model1_tab(all_models: dict, algorithm: str) -> None:
     st.info(
-        "**Model 1** uses pre-admission data only. "
-        "Best used at **admission or orientation** — before any university subjects are taken."
+        "**Model 1** uilizes pre-admission data exclusively and is best applied during admission or orientation, prior to the commencement of any university coursework.    "
     )
     col_inputs, col_results = st.columns([1.1, 0.9], gap="large")
 
