@@ -52,7 +52,7 @@ def main() -> None:
     algorithm  = ui.render_sidebar(ALGORITHMS)
 
     tab1, tab2, tab3, tab_about = st.tabs([
-        "Adminssion Profile",
+        "Admission Profile",
         "Academic Program",
         "Integrated  assessment",
         "About",

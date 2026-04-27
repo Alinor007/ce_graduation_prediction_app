@@ -35,7 +35,7 @@ def render_sidebar(algorithms: list[str]) -> str:
 
 | Model | Category |
 |---|---|
-| **Model 1** | Adminssion Profile |
+| **Model 1** | Admission Profile |
 | **Model 2** | Academic Program |
 | **Model 3** | Integrated Assessment |
 """)
