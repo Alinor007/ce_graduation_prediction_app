@@ -27,17 +27,17 @@ def render_models_overview() -> None:
 def render_sidebar(algorithms: list[str]) -> str:
     """Sidebar settings panel; returns the selected algorithm name."""
     with st.sidebar:
-        st.markdown("## ⚙️ Settings")
+        st.markdown("## Settings")
         chosen = st.selectbox("Algorithm", algorithms, label_visibility="visible")
         st.markdown("---")
         st.markdown("""
 **📐 Model Guide**
 
-| Model | Use When |
+| Model | Category |
 |---|---|
-| **Model 1** | At admission |
-| **Model 2** | Each semester |
-| **Model 3** | Full profile |
+| **Model 1** | Adminssion Profile |
+| **Model 2** | Academic Program |
+| **Model 3** | Integrated Assessment |
 """)
         st.markdown("---")
         st.caption("Decision-support only. Always combine with human judgment.")
