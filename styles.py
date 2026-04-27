@@ -209,7 +209,7 @@ section.main .block-container {
 }
 
 .ce-nav-link:hover {
-  background: var(--maroon-pale);
+  background: var(--gold);
   color: var(--maroon);
 }
 
@@ -688,6 +688,7 @@ div[data-testid="stButton"] > button:active {
 /* Dropdown arrow icon */
 [data-testid="stSidebar"] [data-baseweb="select"] svg {
   fill: #1c0e0f !important;
+  cursor: pointer !important;
 }
 
 /* Dropdown open — list container */
@@ -1081,6 +1082,12 @@ border-top-color: var(--gold-dk);
   border-radius: var(--r-lg);
   padding: 28px 32px;
   box-shadow: var(--sh-sm);
+}
+[data-testid="collapsedControl"] {
+  display: none !important;
+}
+[data-testid="stSidebarCollapseButton"] {
+  display: none !important;
 }
 
 .ce-inst-name {
