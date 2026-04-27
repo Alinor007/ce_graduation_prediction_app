@@ -338,7 +338,7 @@ section.main .block-container {
   font-weight: 700;
    color: #ffffff !important;
   margin: 0 0 14px;
-  line-height: 1.08;
+  line-height: 1.1;
   letter-spacing: -0.025em;
   animation: heroIn 0.65s 0.15s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
@@ -346,6 +346,7 @@ section.main .block-container {
 .ce-hero-accent {
   color: var(--gold);
   display: block;
+    font-size: 1.50rem;
 }
 
 .ce-hero-sub {
@@ -786,9 +787,8 @@ div[data-testid="stButton"] > button:active {
 .ce-ph-body {
   font-size: 0.875rem;
   color: var(--text-3);
-  line-height: 1.65;
-  margin: 0 auto;
-  max-width: 280px;
+
+  
 }
 
 /* ── Result Panels ─────────────────────────────────────────── */
@@ -997,6 +997,7 @@ div[data-testid="stButton"] > button:active {
   display: flex;
   align-items: center;
   gap: 10px;
+  
 }
 
 .ce-section-hd::after {
@@ -1013,7 +1014,7 @@ div[data-testid="stButton"] > button:active {
   border: 1px solid var(--border);
   border-top: 4px solid var(--maroon);
   border-radius: var(--r-lg);
-  padding: 28px 20px;
+  padding: 32px 16px;
   text-align: center;
   box-shadow: var(--sh-sm);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -1024,12 +1025,15 @@ div[data-testid="stButton"] > button:active {
   box-shadow: var(--sh-lg);
 }
 
-.ce-person-card.adviser { border-top-color: var(--gold-dk); }
+.ce-person-card.adviser { 
+border-top-color: var(--gold-dk); 
+
+}
 
 .ce-avatar {
-  width: 78px; height: 78px;
-  border-radius: 50%;
-  border: 3px solid var(--gold);
+   width: 110px; height: 110px;  
+  border-radius: 20%;
+  border-bottom: 4px solid var(--maroon);
   margin: 0 auto 14px;
   display: flex;
   align-items: center;
@@ -1037,12 +1041,10 @@ div[data-testid="stButton"] > button:active {
   font-family: var(--font-display);
   font-size: 1.5rem;
   font-weight: 700;
-  color: white;
-  background: linear-gradient(135deg, var(--maroon), var(--maroon-dk));
+  color: var(--maroon-deep);
 }
 
 .ce-avatar.adv {
-  background: linear-gradient(135deg, var(--gold-dk), var(--gold));
   color: var(--maroon-deep);
   border-color: var(--gold-dk);
 }
@@ -1188,15 +1190,15 @@ NAVBAR_HTML = f"""
   <div class="ce-nav-logo">
     <div class="ce-nav-logo-mark">{LOGO_IMG_TAG}</div>
     <div class="ce-nav-logo-text">
-      <span class="ce-nav-logo-main">CE <em>Predictor</em></span>
-      <span class="ce-nav-logo-sub">MSU–Marawi · Civil Engineering</span>
+      <span class="ce-nav-logo-main">REINFORCE</span>
+      <span class="ce-nav-logo-sub">Department of Civil Engineering</span>
     </div>
   </div>
   <div class="ce-nav-sep"></div>
   <div class="ce-nav-right">
     <div class="ce-nav-pill">
       <span class="ce-nav-pill-dot"></span>
-      Thesis Project 2026
+      Undergraduate Thesis Project 2026
     </div>
   </div>
 </div>
@@ -1207,15 +1209,15 @@ HERO_HTML = """
   <div class="ce-hero-content">
     <div class="ce-hero-badge">
       <span class="ce-badge-dot"></span>
-      Thesis Project · Civil Engineering · MSU–Marawi
+      Undergraduate Thesis Project 2026 · Department of Civil Engineering
     </div>
     <h1 class="ce-hero-title">
-      CE Graduation
-      <span class="ce-hero-accent">Predictor</span>
+      REINFORCE
+      <span class="ce-hero-accent">Regression-based Evaluation and Intelligent Network<br/>Network for forcasting outcomes in<br/> Retention and Completion in Civil Engineering </span>
     </h1>
     <p class="ce-hero-sub">
-      Predict on-time graduation of Civil Engineering students
-      using machine learning — empowering advisers, supporting students.
+      Predicting on-time graduation of Civil Engineering students
+      using machine learning and academic decision-making empowering advisers and supporting students.
     </p>
     <div class="ce-hero-stats">
       <div class="ce-hero-stat">

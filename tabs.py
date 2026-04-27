@@ -21,8 +21,7 @@ def _strand_to_onehot(strand: str) -> dict[str, int]:
 
 def render_model1_tab(all_models: dict, algorithm: str) -> None:
     st.info(
-        "**Model 1** uses pre-admission data only. "
-        "Best used at **admission or orientation** — before any university subjects are taken."
+        "**Model 1** utilizes pre-admission data exclusively and is best applied during admission or orientation, prior to the commencement of any university coursework."
     )
     col_inputs, col_results = st.columns([1.1, 0.9], gap="large")
 
@@ -35,7 +34,7 @@ def render_model1_tab(all_models: dict, algorithm: str) -> None:
         gwa_num, strand = ui.shs_inputs("m1")
         ui.card_close()
 
-        predict_clicked = st.button("🔍 Predict — Model 1", key="btn_1")
+        predict_clicked = st.button(" Predict — Model 1", key="btn_1")
 
     with col_results:
         if not predict_clicked:
@@ -63,8 +62,7 @@ def render_model1_tab(all_models: dict, algorithm: str) -> None:
 
 def render_model2_tab(all_models: dict, algorithm: str) -> None:
     st.info(
-        "**Model 2** uses in-program academic data. "
-        "Best used **each semester** after new grades are posted."
+        "**Model 2** utilizes in-program academic data and is best applied at the end of each semester, following the release of updated grades."
     )
     col_inputs, col_results = st.columns([1.1, 0.9], gap="large")
 
@@ -77,7 +75,7 @@ def render_model2_tab(all_models: dict, algorithm: str) -> None:
         cgpa, total_ret, max_ret, avg_grade, hard_fails = ui.academic_standing_inputs("m2", grades)
         ui.card_close()
 
-        predict_clicked = st.button("🔍 Predict — Model 2", key="btn_2")
+        predict_clicked = st.button(" Predict — Model 2", key="btn_2")
 
     with col_results:
         if not predict_clicked:
@@ -107,8 +105,7 @@ def render_model2_tab(all_models: dict, algorithm: str) -> None:
 
 def render_model3_tab(all_models: dict, algorithm: str) -> None:
     st.info(
-        "**Model 3** combines pre-admission and in-program data "
-        "for the most comprehensive risk profile. Use when **all data is available**."
+        "**Model 3** integrates both pre-admission and in-program academic data to provide a comprehensive risk profile and is used when all relevant data sources are available."
     )
     col_inputs, col_results = st.columns([1.1, 0.9], gap="large")
 
@@ -129,7 +126,7 @@ def render_model3_tab(all_models: dict, algorithm: str) -> None:
         cgpa, total_ret, max_ret, avg_grade, hard_fails = ui.academic_standing_inputs("m3", grades)
         ui.card_close()
 
-        predict_clicked = st.button("🔍 Predict — Model 3", key="btn_3")
+        predict_clicked = st.button(" Predict — Model 3", key="btn_3")
 
     with col_results:
         if not predict_clicked:
