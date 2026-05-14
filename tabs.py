@@ -46,7 +46,8 @@ def render_model1_tab(all_models: dict, algorithm: str) -> None:
             return
 
         inputs = {
-            "SASE_GS": gs, "SASE_MA": ma, "SASE_LA": la,
+            # "SASE_GS": gs, 
+            "SASE_MA": ma, "SASE_LA": la,
             "SASE_SCI": sci, "SASE_AP": ap,
             "SHS_GWA_NUM": gwa_num,
             **_strand_to_onehot(strand),
