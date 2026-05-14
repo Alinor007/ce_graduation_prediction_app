@@ -15,7 +15,7 @@ _LOGO_B64 = _logo_b64()
 LOGO_IMG_TAG = f'<img src="data:image/png;base64,{_LOGO_B64}" style="width:38px;height:38px;object-fit:contain;" />'
 
 # ── Philippine Grading Scale ───────────────────────────────────
-PH_GRADE_OPTIONS = [None, 1.0, 1.25, 1.5, 1.75, 2.0, 2.5, 2.75, 3.0, 5.0]
+PH_GRADE_OPTIONS = [None, 1.0, 1.25, 1.5, 1.75, 2.0,2.25, 2.5, 2.75, 3.0, 5.0]
 PH_GRADE_LABELS = {
     None: "— Not taken —",
     1.0:  "1.0 ",
@@ -23,6 +23,7 @@ PH_GRADE_LABELS = {
     1.5:  "1.5 ",
     1.75: "1.75",
     2.0:  "2.0",
+    2.25: "2.25",
     2.5:  "2.5",
     2.75: "2.75",
     3.0:  "3.0",
@@ -1220,7 +1221,7 @@ HERO_HTML = """
     </div>
     <h1 class="ce-hero-title">
       REINFORCE
-      <span class="ce-hero-accent">Regression-based Evaluation and Intelligent Network<br/>Network for forcasting outcomes in<br/> Retention and Completion in Civil Engineering </span>
+      <span class="ce-hero-accent">Regression-based Evaluation and Intelligent<br/>Network for forcasting outcomes in<br/> Retention and Completion in Civil Engineering </span>
     </h1>
     <p class="ce-hero-sub">
       Predicting on-time graduation of Civil Engineering students
