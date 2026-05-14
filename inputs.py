@@ -109,7 +109,7 @@ def academic_standing_inputs(
     )
 
     valid_grades = [v for v in grades.values() if not (isinstance(v, float) and np.isnan(v))]
-    _valid_ph = [1.0, 1.25, 1.5, 1.75, 2.0, 2.5, 2.75, 3.0, 5.0]
+    _valid_ph = [1.0, 1.25, 1.5, 1.75, 2.0,2.25, 2.5, 2.75, 3.0, 5.0]
 
     if valid_grades:
         raw_avg = float(np.mean(valid_grades))

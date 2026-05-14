@@ -8,7 +8,7 @@ Must match CE_Graduation_Prediction_v3.ipynb exactly.
 ALGORITHMS = ["Random Forest", "Logistic Regression"]
 
 # ── Raw feature columns ───────────────────────────────────────
-SASE_COLS = ["SASE_GS", "SASE_MA", "SASE_LA", "SASE_SCI", "SASE_AP"]
+SASE_COLS = ["SASE_MA", "SASE_LA", "SASE_SCI", "SASE_AP"]
 
 GRADE_COLS = [
     "MAT060", "MAT070", "ENS161",
@@ -26,7 +26,7 @@ STRAND_COLS = [
     "STRAND_ICT", "STRAND_SPORTS", "STRAND_STEM", "STRAND_TVL",
 ]
 
-RETAKE_COLS = ["TOTAL_RETAKES", "MAX_RETAKE", "AVG_GRADE", "HARD_FAILS"]
+RETAKE_COLS = ["TOTAL_RETAKES", "MAX_RETAKE", "HARD_FAILS"]
 
 # ── Feature sets per model ────────────────────────────────────
 FEATURES = {
