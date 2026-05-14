@@ -166,7 +166,7 @@ The app uses the Philippine university grading scale:
 |---|---|
 | 1.0 | Highest |
 | 1.25, 1.5, 1.75 | Above average |
-| 2.0, 2.5, 2.75 | Average |
+| 2.0, 2.25, 2.5, 2.75 | Average |
 | 3.0 | Passing |
 | 5.0 | Failed |
 | — Not taken — | Subject not yet attempted (treated as NaN) |
