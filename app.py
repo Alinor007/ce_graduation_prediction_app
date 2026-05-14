@@ -54,7 +54,7 @@ def main() -> None:
     tab1, tab2, tab3, tab_about = st.tabs([
         "Admission Profile",
         "Academic Program",
-        "Integrated  assessment",
+        "Integrated  Assessment",
         "About",
     ])
 
